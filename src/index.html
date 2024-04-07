@@ -13,13 +13,14 @@
       <h1 class="mt-3 text-3xl block text-center font-semibold"><i class="fa-solid fa-user-large mr-5"></i>Login</h1>
       <hr class="mt-3">
       <div class="mt-3">
-        <label for="username" class="block text-base mb-2">Username</label>
-        <input type="text" id="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Username">
+        <form action="PHP/process_login.php" method="POST"> <!-- Modified -->
+          <label for="username" class="block text-base mb-2">Username</label>
+          <input type="text" id="username" name="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Username"> <!-- Modified -->
       </div>
 
       <div class="mt-3">
         <label for="Password" class="block text-base mb-2">Password</label>
-        <input type="password" id="password" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password">
+        <input type="password" id="password" name="password" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Password"> <!-- Modified -->
       </div>
 
       <div class="mt-3 justify-between items-center">
@@ -33,21 +34,21 @@
           <a href="#" class="text-red-600 font-semibold">Lupa Password?</a>
         </div>
 
-        <div  class="mt-5">
-          <button id="loginButton" class="border-2 border-green-600 bg-green-600 text-white py-1 px-5 w-full rounded-md hover:bg-transparent hover:text-green-300 font-semibold">
-            <i class="fa-solid fa-right-to-bracket mr-5"></i>Login
+        <div class="mt-5">
+          <button id="loginButton" type="submit" class="border-2 border-green-600 bg-green-600 text-white py-1 px-5 w-full rounded-md hover:bg-transparent hover:text-green-300 font-semibold">
+            <i class="fa-solid fa-right-to- bracket mr-5"></i>Login
           </button>
         </div>
-        
-        <div class="mt-3">
-          <button id="registerButton" class="border-2 border-blue-600 bg-blue-600 text-white py-1 px-5 w-full rounded-md hover:bg-transparent hover:text-blue-300 font-semibold">
-            <i class="fa-solid fa-user-plus mr-5"></i>Belum punya akun?
-          </button>
-        </div>
-        
       </div>
+    </form> <!-- Modified -->
+
+    <div class="mt-3">
+      <button id="registerButton" class="border-2 border-blue-600 bg-blue-600 text-white py-1 px-5 w-full rounded-md hover:bg-transparent hover:text-blue-300 font-semibold">
+        <i class="fa-solid fa-user-plus mr-5"></i>Belum punya akun?
+      </button>
     </div>
   </div>
+</div>
 
 <script src="JS/Javascript.js"></script>
 
