@@ -1,12 +1,12 @@
 <?php
 // Database connection
-$servername = "localhost"; // Change this if your database is hosted elsewhere
-$username = "root"; // Your MySQL username
-$password = ""; // Your MySQL password
-$dbname = "contact_app"; // Your database name
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "contact_app";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($servername, $username, $password, $database);
 
 // Check connection
 if ($conn->connect_error) {
@@ -26,14 +26,13 @@ $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'"
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    // User exists, redirect to another HTML page
-    header("Location: " . dirname($_SERVER['PHP_SELF']) . "/../sidebar.html"); // Redirects to sidebar.html in the parent directory
+    // User exists, redirect to PHP/index.php
+    header("Location: ../PHP/index.php");
     exit();
 } else {
     // User doesn't exist or credentials are incorrect
     echo "CREDENTIAL IS INVALID BANG.";
 }
-
 
 $conn->close();
 ?>
