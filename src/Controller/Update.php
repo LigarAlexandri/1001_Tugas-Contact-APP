@@ -14,16 +14,17 @@ if ($conn->connect_error) {
 }
 
 // Process form submission
-if(isset($_POST['submit'])) {
+if(isset($_POST['update'])) {
+    $nomor = $_POST['id'];
     $phone_number = $_POST['phone_number'];
     $owner = $_POST['owner'];
-    
-    $sql = "INSERT INTO contacts (phone_number, owner) VALUES ('$phone_number', '$owner')";
+
+    $sql = "UPDATE contactss SET phone_number='$phone_number', owner='$owner' WHERE id=$nomor";
 
     if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        echo "Record updated successfully";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error updating record: " . $conn->error;
     }
 }
 

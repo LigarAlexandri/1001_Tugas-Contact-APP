@@ -5,6 +5,11 @@ $username = "root";
 $password = "";
 $database = "contact_app";
 
+
+//STILL WIP
+
+
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 
@@ -14,17 +19,18 @@ if ($conn->connect_error) {
 }
 
 // Process form submission
-if(isset($_POST['update'])) {
-    $id = $_POST['id'];
+if(isset($_POST['submit'])) 
+
+{
     $phone_number = $_POST['phone_number'];
     $owner = $_POST['owner'];
-
-    $sql = "UPDATE contacts SET phone_number='$phone_number', owner='$owner' WHERE id=$id";
+    
+    $sql = "INSERT INTO contactss (phone_number, owner) VALUES (null, '$phone_number', '$owner')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+        echo "New record created successfully";
     } else {
-        echo "Error updating record: " . $conn->error;
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
 }
 

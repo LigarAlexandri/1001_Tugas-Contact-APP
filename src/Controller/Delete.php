@@ -17,7 +17,7 @@ if ($conn->connect_error) {
 if(isset($_POST['delete'])) {
     $id = $_POST['id'];
 
-    $sql = "DELETE FROM contacts WHERE id=$id";
+    $sql = "DELETE FROM contactss WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record deleted successfully";

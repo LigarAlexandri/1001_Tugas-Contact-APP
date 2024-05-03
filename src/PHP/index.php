@@ -124,17 +124,17 @@
     <h2>View Contacts</h2>
     <table>
       <tr>
-        <th>ID</th>
+        <th>Nomor</th>
         <th>Phone Number</th>
         <th>Owner</th>
       </tr>
 
       <?php
-      // Include database connection
-      require_once 'Connection.php';
+      // Include database connection MENGGUNAKAN ENV 
+      require_once __DIR__ . '\..\Config\conn.php';
 
       // Query to fetch contacts
-      $sql = "SELECT id, phone_number, owner FROM contacts";
+      $sql = "SELECT nomor, phone_number, owner FROM contactss";
       $result = $conn->query($sql);
 
       // Check if there are results
@@ -142,7 +142,7 @@
         // Output data of each row
         while ($row = $result->fetch_assoc()) {
           echo "<tr>";
-          echo "<td>" . $row["id"] . "</td>";
+          echo "<td>" . $row["nomor"] . "</td>";
           echo "<td>" . $row["phone_number"] . "</td>";
           echo "<td>" . $row["owner"] . "</td>";
           echo "</tr>";
@@ -160,7 +160,7 @@
   <!-- Create Contact -->
   <div class="mx-4">
     <h2 class="mb-2">Create Contact</h2>
-    <form method="post" action="create.php" class="mb-4">
+    <form method="post" action="/src/Controller/Create.php" class="mb-4">
       <div class="flex flex-col mb-4">
         <label for="phone_number" class="mb-1">Phone Number:</label>
         <input type="text" id="phone_number" name="phone_number" class="px-4 py-2 border rounded-md">
@@ -176,9 +176,9 @@
   <!-- Update Contact -->
   <div class="mx-4">
     <h2 class="mb-2">Update Contact</h2>
-    <form method="post" action="update.php" class="mb-4">
+    <form method="post" action="/src/Controller/Update.php" class="mb-4">
       <div class="flex flex-col mb-4">
-        <label for="update_id" class="mb-1">ID:</label>
+        <label for="update_id" class="mb-1">Nomor:</label>
         <input type="text" id="update_id" name="id" class="px-4 py-2 border rounded-md">
       </div>
       <div class="flex flex-col mb-4">
@@ -196,7 +196,7 @@
   <!-- Delete Contact -->
   <div class="mx-4">
     <h2 class="mb-2">Delete Contact</h2>
-    <form method="post" action="delete.php">
+    <form method="post" action="/src/Controller/Delete.php">
       <div class="flex flex-col mb-4">
         <label for="delete_id" class="mb-1">ID:</label>
         <input type="text" id="delete_id" name="id" class="px-4 py-2 border rounded-md">
@@ -206,9 +206,6 @@
   </div>
 </div>
 
-
-
-
-  </div>
+</div>
 </body>
 </html>
