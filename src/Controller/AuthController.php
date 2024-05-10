@@ -2,7 +2,7 @@
 
 class AuthController {
     public function login() {
-        return view('login');
+        return view('index.html');
     }
 }
 ?>

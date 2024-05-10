@@ -1,5 +1,5 @@
 <?php
-// WIP Still stuck :/
+// WIP Still stuck part 2 :/
 
 include_once 'Config/static.php';
 include_once 'Controller/main.php';

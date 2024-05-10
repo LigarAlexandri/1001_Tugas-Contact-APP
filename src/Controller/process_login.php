@@ -27,7 +27,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     // User exists, redirect to PHP/index.php
-    header("Location: ../PHP/index.php");
+    header("Location: ../View/index.php");
     exit();
 } else {
     // User doesn't exist or credentials are incorrect

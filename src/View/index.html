@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1001-Tugas Contact APP</title>
   <link  rel="stylesheet" href="./output.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <div class="flex justify-center items-center h-screen" style="background-image: url('https://awsimages.detik.net.id/visual/2023/12/12/calon-presiden-capres-anies-baswedan-prabowo-subianto-dan-ganjar-pranowo-saat-debat-capres-2024-di-kantor-kpu-ri-jakarta-selas-6_169.jpeg?w=715&q=90'); background-size: cover; background-position: center;">
+    <form action="../Controller/process_login.php" method="POST">
     <div class="w-96 p-6 shadow-lg bg-white rounded-md">
       <h1 class="mt-3 text-3xl block text-center font-semibold"><i class="fa-solid fa-user-large mr-5"></i>Login</h1>
       <hr class="mt-3">
       <div class="mt-3">
-        <form action="PHP/process_login.php" method="POST"> <!-- Modified -->
+         <!-- Modified -->
           <label for="username" class="block text-base mb-2">Username</label>
           <input type="text" id="username" name="username" class="border w-full text-base px-2 py-1 focus:outline-none focus:ring-0 focus:border-gray-600" placeholder="Enter Username"> <!-- Modified -->
       </div>

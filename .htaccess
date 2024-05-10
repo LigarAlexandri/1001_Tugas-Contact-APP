@@ -1,15 +1,13 @@
-# Still WIP :/
-
 RewriteEngine On
-RewriteBase /contact-app/
-DirectoryIndex src/index.html [L]
+RewriteBase /
 
-# Rewrite requests to index.php to indexregis.html
-RewriteRule ^process_login\.php$ index.html [L]
+# Redirect requests to the root URL to your desired index.html file
+RewriteRule ^$ src/View/index.html [L]
 
-# For all other requests, rewrite to indexregis.html
+# Exclude process_login.php from redirection
+RewriteCond %{REQUEST_URI} !^src/Controller/process_login.php$
+
+# Other rules for existing files and directories
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ src/indexregis.html [L]
-
-
+RewriteRule . src/View/index.html [L]

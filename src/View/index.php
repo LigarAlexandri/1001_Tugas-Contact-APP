@@ -173,9 +173,9 @@
     </form>
   </div>
 
-  <!-- Update Contact -->
+  <!-- Update Contact, Anyway CRUD nya masih blm bisa buat jadi satu di model, jadi kupisahin -->
   <div class="mx-4">
-    <h2 class="mb-2">Update Contact</h2>
+    <h2 class="mb-2">Update Contact</h2> 
     <form method="post" action="/src/Controller/Update.php" class="mb-4">
       <div class="flex flex-col mb-4">
         <label for="update_id" class="mb-1">Nomor:</label>
@@ -204,6 +204,7 @@
       <input type="submit" name="delete" value="Delete" class="px-4 py-2 bg-red-500 text-white rounded-md cursor-pointer">
     </form>
   </div>
+  
 </div>
 
 </div>
