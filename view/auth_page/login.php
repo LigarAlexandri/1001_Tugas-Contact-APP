@@ -9,7 +9,7 @@
 </head>
 <body>
   <div class="flex justify-center items-center h-screen" style="background-image: url('https://awsimages.detik.net.id/visual/2023/12/12/calon-presiden-capres-anies-baswedan-prabowo-subianto-dan-ganjar-pranowo-saat-debat-capres-2024-di-kantor-kpu-ri-jakarta-selas-6_169.jpeg?w=715&q=90'); background-size: cover; background-position: center;">
-    <form action="../Controller/process_login.php" method="POST">
+    <form action="<?= urlpath('login') ?>" method="POST">
     <div class="w-96 p-6 shadow-lg bg-white rounded-md">
       <h1 class="mt-3 text-3xl block text-center font-semibold"><i class="fa-solid fa-user-large mr-5"></i>Login</h1>
       <hr class="mt-3">

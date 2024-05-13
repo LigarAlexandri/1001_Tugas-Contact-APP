@@ -1,7 +1,7 @@
 <?php
 function view($page, $data=[]) {
     extract($data);
-    include 'src/'.$page.'.php';
+    include 'view/'.$page.'.php';
 }
 
 class Router { 
@@ -37,4 +37,3 @@ function urlpath($path) {
     require_once 'config/static.php';
     return BASEURL.$path;
 }
-

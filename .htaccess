@@ -1,13 +1,6 @@
 RewriteEngine On
-RewriteBase /
-
-# Redirect requests to the root URL to your desired index.html file
-RewriteRule ^$ src/View/index.html [L]
-
-# Exclude process_login.php from redirection
-RewriteCond %{REQUEST_URI} !^src/Controller/process_login.php$
-
-# Other rules for existing files and directories
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . src/View/index.html [L]
+    RewriteBase /contact-app/
+    RewriteRule ^index\\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /contact-app/index.php [L]
